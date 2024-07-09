@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>班級行事曆</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button id="settings-btn">設置</button>
+        <div id="settings-panel" style="display:none;">
+            <h3>自定義顏色</h3>
+            <label>背景顏色: <input type="color" id="bg-color" value="#f4f4f4"></label>
+            <label>字體顏色: <input type="color" id="font-color" value="#333333"></label>
+            <button id="apply-settings">套用</button>
+        </div>
+
+        <h1>班級行事曆</h1>
+        
+        <div class="calendar-controls">
+            <button id="prev-month">上個月</button>
+            <h2 id="current-month">2024年7月</h2>
+            <button id="next-month">下個月</button>
+        </div>
+
+        <table id="calendar">
+            <thead>
+                <tr>
+                    <th>週日</th>
+                    <th>週一</th>
+                    <th>週二</th>
+                    <th>週三</th>
+                    <th>週四</th>
+                    <th>週五</th>
+                    <th>週六</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 日期和事件將通過JavaScript動態填充 -->
+            </tbody>
+        </table>
+
+        <form id="event-form">
+            <input type="date" id="event-date" required>
+            <input type="time" id="event-time">
+            <input type="text" id="event-description" placeholder="事件描述" required>
+            <button type="submit">添加事件</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
