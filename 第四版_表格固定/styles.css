@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+}
+
+.calendar-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    width: 14.28%;
+    height: 100px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.event {
+    background-color: #e6f3ff;
+    margin: 2px 0;
+    padding: 2px;
+    font-size: 0.8em;
+    border-radius: 3px;
+    word-wrap: break-word;
+    white-space: normal;
+    position: relative;
+    cursor: pointer;
+}
+
+.event:hover::after {
+    content: '×';
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff0000;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    margin-top: 20px;
+}
+
+input[type="date"], input[type="time"], input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#settings-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#settings-panel {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#settings-panel label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#settings-panel input[type="color"] {
+    margin-left: 10px;
+}
+
+#apply-settings {
+    margin-top: 10px;
+}
+
+.context-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 5px;
+    z-index: 1000;
+}
+
+.context-menu button {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.context-menu button:hover {
+    background-color: #e9e9e9;
+}
